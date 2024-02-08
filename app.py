@@ -14,7 +14,7 @@ start_http_server(8001)
 @app.route("/")
 def hello_world():
     REQUESTS.labels("/").inc()
-    html = f"<h1>Web App Demo!</h1> Request Served from <b>{socket.gethostname()}</b><br>"
+    html = f"<h1>This is a Web App Demo!</h1> Request Served from <b>{socket.gethostname()}</b><br>"
     return html
 
 @LATENCY.time()
